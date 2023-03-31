@@ -1,11 +1,11 @@
 /* 基本颜色和字体 */
 :root {
-  --main-bg-color: #ffffff;
+  --main-bg-color: #f0f0f0;
   --main-text-color: #444444;
   --main-accent-color: #0078d7;
   --hover-color: #e5e5e5;
-  --header-bg-color: #f0f0f0;
-  --header-text-color: #2f2f2f;
+  --header-bg-color: #0078d7;
+  --header-text-color: #ffffff;
   --input-bg-color: #ffffff;
   --input-border-color: #cccccc;
   --input-text-color: #2f2f2f;
@@ -39,6 +39,10 @@ body {
 
 #header .nav-item .nav-link:hover {
   color: var(--main-accent-color);
+}
+
+#header .navbar {
+  background-color: var(--header-bg-color);
 }
 
 #header .navbar-brand {
@@ -137,6 +141,22 @@ a:hover {
 
 .list-group-item:hover {
   background-color: var(--hover-color);
+}
+
+.list-group-item.active {
+  border-color: var(--main-accent-color);
+  background-color: var(--main-bg-color);
+  position: relative;
+}
+
+.list-group-item.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  background-color: var(--main-accent-color);
 }
 
 .hr {
